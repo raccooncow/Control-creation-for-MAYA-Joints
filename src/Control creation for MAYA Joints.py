@@ -50,4 +50,8 @@ for jnt in joints:
     if parent_joint:
         parent_joint = parent_joint[0]
             # Only parent if parent joint is also in selection
-            
+        if parent_joint in joint_ctrl_map:
+            cmds.parent(
+                joint_ctrl_map[jnt]["grp"],
+                joint_ctrl_map[parent_joint]["con"]
+            )
