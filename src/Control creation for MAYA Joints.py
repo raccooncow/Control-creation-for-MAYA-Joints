@@ -1,4 +1,5 @@
 # Add imports
+import maya.cmds as cmds
 
 # Create empty dict to store joint
 
