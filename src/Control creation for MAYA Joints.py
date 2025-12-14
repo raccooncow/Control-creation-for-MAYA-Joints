@@ -1,6 +1,9 @@
 # Add imports
 import maya.cmds as cmds
 
+# Get selected Joints
+joints = cmds.ls(selection=True, type="joint")
+
 # Create empty dict to store joint
 joint_ctrl_map = {}
 # Function remove_joint_ending(name)
