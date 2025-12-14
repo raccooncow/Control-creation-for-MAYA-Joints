@@ -43,3 +43,9 @@ for jnt in joints:
         "con": con,
         "grp": grp
     }
+
+# Parent groups based on joint hierarchy
+for jnt in joints:
+    parent_joint = cmds.listRelatives(jnt, parent=True, type="joint")
+    if parent_joint:
+        parent_joint = parent_joint[0]
