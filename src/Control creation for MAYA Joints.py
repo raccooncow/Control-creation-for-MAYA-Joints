@@ -16,3 +16,10 @@ def remove_joint_ending(name):
             return name[:-len(ending)]
     # If no ending, return og name
     return name
+
+# Create controls & groups
+    # Create control
+    # Create group
+    # Align group to joint
+    # Zero out control
+    # Control drives joint
