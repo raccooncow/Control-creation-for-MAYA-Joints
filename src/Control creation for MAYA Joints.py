@@ -30,9 +30,9 @@ for jnt in joints:
         constructionHistory=False
     )[0]
     # Create group
-
+    grp = cmds.group(con, name=grp_name)
     # Align group to joint
-
+    cmds.delete(cmds.parentConstraint(jnt, grp, maintainOffset=False))
     # Zero out control
 
     # Control drives joint
