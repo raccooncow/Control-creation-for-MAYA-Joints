@@ -34,5 +34,6 @@ for jnt in joints:
     # Align group to joint
     cmds.delete(cmds.parentConstraint(jnt, grp, maintainOffset=False))
     # Zero out control
-
+    cmds.makeIdentity(ctrl, apply=True, translate=True, rotate=True, scale=True)
+    cmds.delete(ctrl, constructionHistory=True)
     # Control drives joint
