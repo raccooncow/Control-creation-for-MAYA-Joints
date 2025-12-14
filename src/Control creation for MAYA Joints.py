@@ -49,3 +49,5 @@ for jnt in joints:
     parent_joint = cmds.listRelatives(jnt, parent=True, type="joint")
     if parent_joint:
         parent_joint = parent_joint[0]
+            # Only parent if parent joint is also in selection
+            
