@@ -38,3 +38,8 @@ for jnt in joints:
     cmds.delete(con, constructionHistory=True)
     # Control drives joint
     cmds.parentConstraint(con, jnt, maintainOffset=True)
+    # Save map
+    joint_ctrl_map[jnt] = {
+        "con": con,
+        "grp": grp
+    }
