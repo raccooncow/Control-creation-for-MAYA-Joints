@@ -10,5 +10,6 @@ def remove_joint_ending(name):
         # If joint ends with either
         if name.endswith(ending):
             # Remove ending and return name
-
+            return name[:-len(ending)]
     # If no ending, return og name
+    return name
