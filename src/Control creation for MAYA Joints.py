@@ -18,8 +18,16 @@ def remove_joint_ending(name):
     return name
 
 # Create controls & groups
+for jnt in joints:
+    base_name = remove_joint_ending(jnt)
+    con_name = base_name + "_CON"
+    grp_name = base_name + "_GRP"
     # Create control
+
     # Create group
+
     # Align group to joint
+
     # Zero out control
+
     # Control drives joint
