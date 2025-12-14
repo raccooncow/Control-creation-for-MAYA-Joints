@@ -6,9 +6,9 @@ joint_ctrl_map = {}
 # Function remove_joint_ending(name)
 def remove_joint_ending(name):
     # For loop for joints ending in JNT or jnt
-
+    for ending in ["_JNT", "_jnt"]:
         # If joint ends with either
-
+        if name.endswith(ending):
             # Remove ending and return name
 
     # If no ending, return og name
