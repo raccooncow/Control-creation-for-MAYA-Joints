@@ -7,7 +7,7 @@ Demo Video:
 GitHub Repo: https://github.com/raccooncow/Control-creation-for-MAYA-Joints.git
 
 ## Description
-This will be a simple code that creates NURBS Circles and Groups that will be parented to joints selected, so that the circles control movement of the joints.
+This will be a simple code that creates NURBS Circles and groups, which will be parented to the selected joints, allowing the circles to control the movement of the joints. Copy and paste the code into Maya's script editor, select the joints you want to have controls, and then hit Execute.
 
 ### Key Features
 NURBS Circles will be created using Python code.
