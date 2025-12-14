@@ -23,7 +23,12 @@ for jnt in joints:
     con_name = base_name + "_CON"
     grp_name = base_name + "_GRP"
     # Create control
-
+    con = cmds.circle(
+        name = con_name,
+        normal = (1, 0, 0),
+        radius = 3,
+        constructionHistory=False
+    )[0]
     # Create group
 
     # Align group to joint
