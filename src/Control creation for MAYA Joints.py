@@ -39,13 +39,3 @@ for root in roots:
     cmds.makeIdentity(con, apply=True, translate=True, rotate=True, scale=True)
     cmds.delete(con, constructionHistory=True)
     cmds.parentConstraint(con, jnt, maintainOffset=True)
-
-for jnt in joints:
-    parent_joint = cmds.listRelatives(jnt, parent=True, type="joint")
-    if parent_joint:
-        parent_joint = parent_joint[0]
-        if parent_joint in joint_ctrl_map:
-            cmds.parent(
-                joint_ctrl_map[jnt]["grp"],
-                joint_ctrl_map[parent_joint]["con"]
-            )
