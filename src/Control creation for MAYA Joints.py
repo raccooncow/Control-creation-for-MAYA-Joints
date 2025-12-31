@@ -39,10 +39,6 @@ for root in roots:
     cmds.makeIdentity(con, apply=True, translate=True, rotate=True, scale=True)
     cmds.delete(con, constructionHistory=True)
     cmds.parentConstraint(con, jnt, maintainOffset=True)
-    joint_ctrl_map[jnt] = {
-        "con": con,
-        "grp": grp
-    }
 
 for jnt in joints:
     parent_joint = cmds.listRelatives(jnt, parent=True, type="joint")
