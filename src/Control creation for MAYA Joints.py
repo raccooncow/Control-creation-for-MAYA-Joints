@@ -35,7 +35,9 @@ for root in roots:
         constructionHistory=False
     )[0]
     grp = cmds.group(con, name=grp_name)
-    cmds.delete(cmds.parentConstraint(jnt, grp, maintainOffset=False))
     cmds.makeIdentity(con, apply=True, translate=True, rotate=True, scale=True)
     cmds.delete(con, constructionHistory=True)
     cmds.parentConstraint(con, jnt, maintainOffset=True)
+    if previous_control:
+        cmds.parent(grp, previous_control)
+    previous_control = con
