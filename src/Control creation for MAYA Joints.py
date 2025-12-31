@@ -28,17 +28,23 @@ for root in roots:
         base_name = remove_joint_ending(jnt)
         con_name = base_name + "_CON"
         grp_name = base_name + "_GRP"
-    con = cmds.circle(
-        name = con_name,
-        normal = (1, 0, 0),
-        radius = 3,
-        constructionHistory=False
-    )[0]
-    grp = cmds.group(con, name=grp_name)
-    cmds.delete(cmds.parentConstraint(jnt, grp, maintainOffset=False))
-    cmds.makeIdentity(con, apply=True, translate=True, rotate=True, scale=True)
-    cmds.delete(con, constructionHistory=True)
-    cmds.parentConstraint(con, jnt, maintainOffset=True)
-    if previous_control:
-        cmds.parent(grp, previous_control)
-    previous_control = con
+
+        con = cmds.circle(
+            name=con_name,
+            normal=(1, 0, 0),
+            radius=3,
+            constructionHistory=False
+        )[0]
+
+        grp = cmds.group(con, name=grp_name)
+
+        cmds.delete(cmds.parentConstraint(jnt, grp, maintainOffset=False))
+        cmds.makeIdentity(con, apply=True, translate=True, rotate=True, scale=True)
+        cmds.delete(con, constructionHistory=True)
+
+        cmds.parentConstraint(con, jnt, maintainOffset=True)
+
+        if previous_control:
+            cmds.parent(grp, previous_control)
+
+        previous_control = con
