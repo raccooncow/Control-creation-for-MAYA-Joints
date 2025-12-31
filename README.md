@@ -19,8 +19,6 @@ Any history or deforms will be zeroed out.
 I want to make the circle large, easy to grab, and not hide in the joint chain. I want controls and groups to be parented ONLY if their joints are parented, if there are separate joint chains then my code should create separate control chains, and the control hierarchy should mirror the joint’s parent, not selection order.
 
 ### File Structure
-Control creation for MAYA Joints.py – 
-
-requirements.txt – Libraries that are neccessary for code.
+Control creation for MAYA Joints.py – Copy and Paste into Maya script editor code.
 
 README.md – Project overview, instructions, and descriptions.
