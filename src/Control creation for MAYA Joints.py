@@ -1,6 +1,6 @@
 import maya.cmds as cmds
 
-joints = cmds.ls(selection=True, type="joint")
+roots = cmds.ls(selection=True, type="joint")
 
 joint_ctrl_map = {}
 def remove_joint_ending(name):
@@ -8,6 +8,19 @@ def remove_joint_ending(name):
         if name.endswith(ending):
             return name[:-len(ending)]
     return name
+
+def get_joint_chain(root):
+    chain = [root]
+    current = root
+
+    while True:
+        children = cmds.listRelatives(current, children=True, type="joint") or []
+        if not children:
+            break
+        current = children[0]
+        chain.append(current)
+
+    return chain
 
 for jnt in joints:
     base_name = remove_joint_ending(jnt)
