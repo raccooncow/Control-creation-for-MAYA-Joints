@@ -1,7 +1,7 @@
 # Control-creation-for-MAYA-Joints
 
 ## Demo
-Demo Video: 
+Demo Video: https://youtu.be/7HGAmBfc-8w
 
 ## GitHub Repository
 GitHub Repo: https://github.com/raccooncow/Control-creation-for-MAYA-Joints.git
